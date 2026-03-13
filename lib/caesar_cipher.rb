@@ -3,19 +3,16 @@
 # Encapsulated the logic into a class object for good code best practices.
 class CaesarCipher
   # LOGIC:
-  # create an alphabet variable
-  # iterate through the characters of the string one at the time,
-  # check if the character is in the array of the alphabet
-  # and if it is in the alphabet then I substitute the index of the alphabet's letter
-  # to the index of the letter that shifts according to the `shift factor`
-  # which will be an integer number passed as the second argument
-  # on 'caesar_cipher' method, the first argument would be the string to be deciphered.
-  # This will require the creationof an array of all the alphabetical characters.
-
+  # create 2 x alphabet variable for caps and lower cases
+  # wrap shift_factor
+  # use translate to replace the actual alphabet's letters with the shifted one's
+  # this will require a shifted alphabet couple for caps and lower cases
   def caesar_cipher(string, shift_factor)
-    string.bytes # [num1, num2, ...]
-          .map { |num| num + shift_factor } # [num3, num4, ...]
-          .map(&:chr) # ["letter3", "letter4", ...]
-          .join
+    lowcase_alphabet = ('a'..'z').to_a.join # "abcdefghijklmnopqrstuvwxyz", to sepparate caps and lower cases from wwrapping over eachother
+    caps_alphabet = lowcase_alphabet.upcase # "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    shift_factor_wrap = shift_factor % 26 # to reset shift_factor when is bigger than the alphabet's characters i.e 26
+    shifted_lowcase_alphabet = lowcase_alphabet.chars.rotate(shift_factor_wrap).join # to be used as replacement for translate method
+    shifted_caps_alphabet = caps_alphabet.chars.rotate(shift_factor_wrap).join # -//-
+    string.tr(lowcase_alphabet + caps_alphabet, shifted_lowcase_alphabet + shifted_caps_alphabet) # translate method with the 2 alphabets e.g 'hello'.tr('el', 'ip') #=> "hippo"
   end
 end

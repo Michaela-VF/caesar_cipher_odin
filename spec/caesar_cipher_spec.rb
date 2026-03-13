@@ -11,9 +11,9 @@ RSpec.describe CaesarCipher do
       cc = CaesarCipher.new
       expect(cc.caesar_cipher('apple', 2)).to eq('crrng')
     end
-    # it "deciphers correctly with a 'right shift factor of 5' the string 'What a string!' into 'Bmfy f xywnsl!'" do
-    #     cc = CaesarCipher.new
-    #     expect(cc.caesar_cipher("What a string!", 5)).to eq("Bmfy f xywnsl!")
-    # end
+    it "deciphers correctly with a 'right shift factor of 5' the string 'What a string!' into 'Bmfy f xywnsl!'" do
+      cc = CaesarCipher.new
+      expect(cc.caesar_cipher('What a string!', 5)).to eq('Bmfy f xywnsl!')
+    end
   end
 end

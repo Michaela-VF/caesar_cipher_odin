@@ -13,7 +13,7 @@
       <img src="./assets/0.13.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2026-03-12T10:30:52+00:00">2026-03-12T10:30:52+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2026-03-13T18:03:16+00:00">2026-03-13T18:03:16+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -29,7 +29,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.0
+         1.75
        </span>
     </span> hits/line
     )
@@ -42,8 +42,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>4</b> relevant lines,
-    <span class="green"><b>4</b> lines covered</span> and
+    <b>8</b> relevant lines,
+    <span class="green"><b>8</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -72,11 +72,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#1fe43aa331f9a967d65b51d2d04a046e69f40093" class="src_link" title="lib/caesar_cipher.rb">lib/caesar_cipher.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">4</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.00</td>
+            <td class="cell--number">1.75</td>
             
           </tr>
         
@@ -111,8 +111,8 @@
     
 
     <div class="t-line-summary">
-      <b>4</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>8</b> relevant lines.
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -181,7 +181,7 @@
 
             
 
-            <code class="ruby">  # create an alphabet variable</code>
+            <code class="ruby">  # create 2 x alphabet variable for caps and lower cases</code>
           </li>
         </div>
       
@@ -191,7 +191,7 @@
 
             
 
-            <code class="ruby">  # iterate through the characters of the string one at the time,</code>
+            <code class="ruby">  # wrap shift_factor</code>
           </li>
         </div>
       
@@ -201,7 +201,7 @@
 
             
 
-            <code class="ruby">  # check if the character is in the array of the alphabet</code>
+            <code class="ruby">  # use translate to replace the actual alphabet&#39;s letters with the shifted one&#39;s</code>
           </li>
         </div>
       
@@ -211,62 +211,12 @@
 
             
 
-            <code class="ruby">  # and if it is in the alphabet then I substitute the index of the alphabet&#39;s letter</code>
+            <code class="ruby">  # this will require a shifted alphabet couple for caps and lower cases</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-
-            
-
-            <code class="ruby">  # to the index of the letter that shifts according to the `shift factor`</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-
-            
-
-            <code class="ruby">  # which will be an integer number passed as the second argument</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-
-            
-
-            <code class="ruby">  # on &#39;caesar_cipher&#39; method, the first argument would be the string to be deciphered.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-
-            
-
-            <code class="ruby">  # This will require the creationof an array of all the alphabetical characters.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="10">
             
               <span class="hits">1</span>
             
@@ -278,51 +228,79 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
+          <li class="covered" data-hits="2" data-linenumber="11">
             
-              <span class="hits">1</span>
-            
-
+              <span class="hits">2</span>
             
 
-            <code class="ruby">    string.bytes # [num1, num2, ...]</code>
+            
+
+            <code class="ruby">    lowcase_alphabet = (&#39;a&#39;..&#39;z&#39;).to_a.join # &quot;abcdefghijklmnopqrstuvwxyz&quot;, to sepparate caps and lower cases from wwrapping over eachother</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="17">
+          <li class="covered" data-hits="2" data-linenumber="12">
             
-              <span class="hits">5</span>
-            
-
+              <span class="hits">2</span>
             
 
-            <code class="ruby">          .map { |num| num + shift_factor } # [num3, num4, ...]</code>
+            
+
+            <code class="ruby">    caps_alphabet = lowcase_alphabet.upcase # &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="covered" data-hits="2" data-linenumber="13">
+            
+              <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">          .map(&amp;:chr) # [&quot;letter3&quot;, &quot;letter4&quot;, ...]</code>
+            <code class="ruby">    shift_factor_wrap = shift_factor % 26 # to reset shift_factor when is bigger than the alphabet&#39;s characters i.e 26</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="covered" data-hits="2" data-linenumber="14">
+            
+              <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">          .join</code>
+            <code class="ruby">    shifted_lowcase_alphabet = lowcase_alphabet.chars.rotate(shift_factor_wrap).join # to be used as replacement for translate method</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="covered" data-hits="2" data-linenumber="15">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    shifted_caps_alphabet = caps_alphabet.chars.rotate(shift_factor_wrap).join # -//-</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="16">
+            
+              <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    string.tr(lowcase_alphabet + caps_alphabet, shifted_lowcase_alphabet + shifted_caps_alphabet) # translate method with the 2 alphabets e.g &#39;hello&#39;.tr(&#39;el&#39;, &#39;ip&#39;) #=&gt; &quot;hippo&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
 
             
@@ -332,7 +310,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="18">
             
 
             
