@@ -1,2 +1,14 @@
-.DS
-.coverage
+# macOS
+.DS_Store
+
+# Ruby / Rails
+coverage/
+tmp/
+log/
+*.log
+
+# bundler
+/vendor/bundle
+
+# dotenv / env files
+.env
